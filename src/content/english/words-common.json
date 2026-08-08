@@ -1,0 +1,18 @@
+{
+  "language": "en",
+  "words": [
+    { "text": "application", "difficulty": "easy", "tags": ["job"] },
+    { "text": "candidate", "difficulty": "easy", "tags": ["job"] },
+    { "text": "government", "difficulty": "medium", "tags": ["admin"] },
+    { "text": "ministry", "difficulty": "medium", "tags": ["admin"] },
+    { "text": "secretary", "difficulty": "medium", "tags": ["admin"] },
+    { "text": "computer", "difficulty": "easy", "tags": ["tech"] },
+    { "text": "accuracy", "difficulty": "medium", "tags": ["exam"] },
+    { "text": "assessment", "difficulty": "medium", "tags": ["exam"] },
+    { "text": "qualification", "difficulty": "hard", "tags": ["job"] },
+    { "text": "experience", "difficulty": "hard", "tags": ["job"] },
+    { "text": "signature", "difficulty": "medium", "tags": ["official"] },
+    { "text": "recruitment", "difficulty": "hard", "tags": ["job"] },
+    { "text": "performance", "difficulty": "medium", "tags": ["exam"] }
+  ]
+}

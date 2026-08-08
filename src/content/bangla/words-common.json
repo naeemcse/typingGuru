@@ -1,0 +1,24 @@
+{
+  "language": "bn",
+  "source": "exam-frequency-analysis-2025",
+  "words": [
+    { "text": "আবেদন", "difficulty": "easy", "tags": ["job-form", "common"] },
+    { "text": "প্রার্থী", "difficulty": "medium", "tags": ["job-form", "common"] },
+    { "text": "বাংলাদেশ", "difficulty": "easy", "tags": ["geography", "common"] },
+    { "text": "সরকার", "difficulty": "easy", "tags": ["admin"] },
+    { "text": "পরীক্ষা", "difficulty": "medium", "tags": ["exam"] },
+    { "text": "সচিবালয়", "difficulty": "hard", "tags": ["admin"] },
+    { "text": "মন্ত্রণালয়", "difficulty": "hard", "tags": ["admin"] },
+    { "text": "কম্পিউটার", "difficulty": "medium", "tags": ["tech"] },
+    { "text": "যোগ্যতা", "difficulty": "medium", "tags": ["job-form"] },
+    { "text": "অভিজ্ঞতা", "difficulty": "hard", "tags": ["job-form"] },
+    { "text": "স্বাক্ষর", "difficulty": "medium", "tags": ["official"] },
+    { "text": "নিয়োগ", "difficulty": "medium", "tags": ["job-form"] },
+    { "text": "বিজ্ঞপ্তি", "difficulty": "medium", "tags": ["job-form"] },
+    { "text": "উপজেলা", "difficulty": "easy", "tags": ["geography"] },
+    { "text": "জেলা", "difficulty": "easy", "tags": ["geography"] },
+    { "text": "কার্যালয়", "difficulty": "medium", "tags": ["admin"] },
+    { "text": "স্মারক", "difficulty": "medium", "tags": ["official"] },
+    { "text": "নথি", "difficulty": "easy", "tags": ["official"] }
+  ]
+}

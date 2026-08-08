@@ -1,0 +1,40 @@
+{
+  "language": "bn",
+  "groups": [
+    {
+      "id": "vowels-1",
+      "title": "স্বরবর্ণ (প্রথম ধাপ)",
+      "titleEn": "Vowels Step 1",
+      "items": [
+        { "char": "অ", "romanized": "o", "drillPattern": ["অ", "অঅ", "অঅঅ", "অঅঅঅ"] },
+        { "char": "আ", "romanized": "a", "drillPattern": ["আ", "আআ", "আআআ", "আআআআ"] },
+        { "char": "ই", "romanized": "i", "drillPattern": ["ই", "ইই", "ইইই", "ইইইই"] },
+        { "char": "ঈ", "romanized": "ee", "drillPattern": ["ঈ", "ঈঈ", "ঈঈঈ", "ঈঈঈঈ"] },
+        { "char": "উ", "romanized": "u", "drillPattern": ["উ", "উউ", "উউউ", "উউউউ"] }
+      ]
+    },
+    {
+      "id": "consonants-1",
+      "title": "ব্যঞ্জনবর্ণ (ক-বর্গ)",
+      "titleEn": "Consonants (Ka-Group)",
+      "items": [
+        { "char": "ক", "romanized": "k", "drillPattern": ["ক", "কক", "ককক", "কককক"] },
+        { "char": "খ", "romanized": "kh", "drillPattern": ["খ", "খখ", "খখখ", "খখখখ"] },
+        { "char": "গ", "romanized": "g", "drillPattern": ["গ", "গগ", "গগগ", "গগগগ"] },
+        { "char": "ঘ", "romanized": "gh", "drillPattern": ["ঘ", "ঘঘ", "ঘঘঘ", "ঘঘঘঘ"] },
+        { "char": "ঙ", "romanized": "ng", "drillPattern": ["ঙ", "ঙঙ", "ঙঙঙ", "ঙঙঙঙ"] }
+      ]
+    },
+    {
+      "id": "conjuncts-1",
+      "title": "যুক্তাক্ষর (সাধারণ)",
+      "titleEn": "Common Conjuncts",
+      "items": [
+        { "char": "ক্ষ", "romanized": "kkh", "drillPattern": ["ক্ষ", "ক্ষক্ষ", "শিক্ষা", "পরীক্ষা"] },
+        { "char": "জ্ঞ", "romanized": "ggya", "drillPattern": ["জ্ঞ", "জ্ঞজ্ঞ", "জ্ঞান", "বিজ্ঞাপন"] },
+        { "char": "ঞ্চ", "romanized": "nch", "drillPattern": ["ঞ্চ", "ঞ্চঞ্চ", "পঞ্চম", "অঞ্চল"] },
+        { "char": "ঙ্গ", "romanized": "ngg", "drillPattern": ["ঙ্গ", "ঙ্গঙ্গ", "বঙ্গ", "সঙ্গীত"] }
+      ]
+    }
+  ]
+}

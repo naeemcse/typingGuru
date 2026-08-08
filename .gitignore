@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Production & Build output
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Vercel deployment & cache
+.vercel/
+
+# Environment & Secret files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite & build tool caches
+.vite/
+.cache/
+temp/
+tmp/
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Editor & IDE settings
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+desktop.ini
+
+# Workspace Agent internal scratch files
+.gemini/

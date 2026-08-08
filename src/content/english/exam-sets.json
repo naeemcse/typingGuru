@@ -1,0 +1,29 @@
+{
+  "language": "en",
+  "examSets": [
+    {
+      "id": "exam-set-en-01",
+      "title": "Standard Administrative Typing Exam (English Set 1)",
+      "type": "paragraph",
+      "durationSec": 300,
+      "content": "Official recruitment typing assessments test candidate proficiency in speed and accuracy under strict timed conditions. Candidates are expected to maintain a minimum standard of thirty words per minute with an error rate below five percent. Pay close attention to capitalization, punctuation marks, and spacing between sentences.",
+      "passCriteria": {
+        "minWpm": 30,
+        "minCpm": 150,
+        "maxErrorRate": 0.05
+      }
+    },
+    {
+      "id": "exam-set-en-02",
+      "title": "Executive Typist Speed Assessment (English Set 2)",
+      "type": "paragraph",
+      "durationSec": 180,
+      "content": "Professional data entry operators and administrative assistants are evaluated on speed consistency and error minimization. Maintaining steady rhythm and posture minimizes fatigue during high-volume document typing tests.",
+      "passCriteria": {
+        "minWpm": 40,
+        "minCpm": 200,
+        "maxErrorRate": 0.03
+      }
+    }
+  ]
+}
