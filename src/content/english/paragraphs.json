@@ -5,13 +5,71 @@
       "id": "en-para-01",
       "title": "Digital Transformation & Efficiency",
       "category": "Administration",
+      "difficulty": "medium",
       "text": "The rapid acceleration of digital transformation in modern governance demands efficient keyboard typing skills. Candidates participating in public sector recruitment assessments must demonstrate high typing speed combined with exceptional accuracy. Consistent practice builds finger muscle memory, allowing typists to execute documents effortlessly."
     },
     {
       "id": "en-para-02",
       "title": "Artificial Intelligence & Human Potential",
       "category": "Technology",
+      "difficulty": "medium",
       "text": "Artificial intelligence continues to revolutionize global industries, automating repetitive workflows and elevating human productivity. As digital tools evolve, human mastery over fundamental input techniques such as speed typing remains essential for managing data entry, software operations, and technical documentation."
+    },
+    {
+      "id": "en-para-03",
+      "title": "Climate Change & Environmental Sustainability",
+      "category": "Environment",
+      "difficulty": "hard",
+      "text": "Climate change poses an unprecedented threat to ecosystems and human civilization worldwide. Rising sea levels, extreme weather events, and biodiversity loss demand immediate collective action. Governments, corporations, and individuals must collaborate to transition toward renewable energy sources, sustainable agriculture, and responsible consumption patterns to safeguard the planet for future generations."
+    },
+    {
+      "id": "en-para-04",
+      "title": "The Importance of Effective Communication",
+      "category": "Professional Skills",
+      "difficulty": "easy",
+      "text": "Effective communication is the cornerstone of professional success. Whether drafting emails, preparing reports, or composing official correspondence, the ability to type quickly and accurately saves valuable time. Clear and precise written communication reduces misunderstandings and enhances workplace productivity across all sectors."
+    },
+    {
+      "id": "en-para-05",
+      "title": "Public Administration & Good Governance",
+      "category": "Administration",
+      "difficulty": "hard",
+      "text": "Good governance requires transparency, accountability, and the rule of law. Public administrators play a crucial role in implementing government policies and delivering services to citizens. Efficient document processing, accurate record-keeping, and timely correspondence are fundamental duties that demand proficient typing skills. Administrative officers must balance speed with precision to maintain the integrity of official records."
+    },
+    {
+      "id": "en-para-06",
+      "title": "Bangladesh: A Nation of Resilience",
+      "category": "General Knowledge",
+      "difficulty": "medium",
+      "text": "Bangladesh, a South Asian nation of over 170 million people, has made remarkable strides in economic development and social progress. From its liberation in 1971 to becoming a global leader in garment manufacturing and microfinance, the country exemplifies resilience and determination. The nation continues to invest in education, healthcare, and infrastructure to build a prosperous future for its citizens."
+    },
+    {
+      "id": "en-para-07",
+      "title": "Data Entry & Office Automation",
+      "category": "Professional Skills",
+      "difficulty": "easy",
+      "text": "Data entry professionals are the backbone of modern office operations. Their role involves accurately inputting information into databases, spreadsheets, and management systems. Speed and accuracy are equally important in this field, as errors in data entry can lead to significant operational problems. Regular typing practice and familiarity with keyboard shortcuts dramatically improve productivity."
+    },
+    {
+      "id": "en-para-08",
+      "title": "The Evolution of Computing Technology",
+      "category": "Technology",
+      "difficulty": "hard",
+      "text": "The evolution of computing technology from room-sized mainframes to pocket-sized smartphones represents one of humanity's greatest achievements. Operating systems, programming languages, and networking protocols have transformed how organizations process information. Cloud computing, cybersecurity, and machine learning continue to reshape the technological landscape, creating new opportunities and challenges for professionals across every industry."
+    },
+    {
+      "id": "en-para-09",
+      "title": "Health & Wellness in the Modern Workplace",
+      "category": "Health",
+      "difficulty": "medium",
+      "text": "Maintaining health and wellness in the modern workplace requires a balanced approach to physical activity, nutrition, and mental well-being. Prolonged sitting and repetitive keyboard use can lead to musculoskeletal disorders if proper ergonomic practices are not followed. Taking regular breaks, maintaining correct posture, and performing stretching exercises are essential habits for office workers who spend long hours at their desks."
+    },
+    {
+      "id": "en-para-10",
+      "title": "Financial Literacy & Personal Finance",
+      "category": "Finance",
+      "difficulty": "medium",
+      "text": "Financial literacy is an essential life skill that empowers individuals to make informed decisions about saving, investing, and managing debt. Understanding concepts such as compound interest, budgeting, and risk diversification helps build long-term financial security. In an increasingly complex economic environment, educating young people about personal finance should be a priority for educational institutions."
     }
   ]
 }

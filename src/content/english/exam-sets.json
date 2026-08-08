@@ -3,9 +3,10 @@
   "examSets": [
     {
       "id": "exam-set-en-01",
-      "title": "Standard Administrative Typing Exam (English Set 1)",
+      "title": "Standard Administrative Typing Exam — Set 1",
       "type": "paragraph",
       "durationSec": 300,
+      "difficulty": "standard",
       "content": "Official recruitment typing assessments test candidate proficiency in speed and accuracy under strict timed conditions. Candidates are expected to maintain a minimum standard of thirty words per minute with an error rate below five percent. Pay close attention to capitalization, punctuation marks, and spacing between sentences.",
       "passCriteria": {
         "minWpm": 30,
@@ -15,14 +16,67 @@
     },
     {
       "id": "exam-set-en-02",
-      "title": "Executive Typist Speed Assessment (English Set 2)",
+      "title": "Executive Typist Speed Assessment — Set 2",
       "type": "paragraph",
       "durationSec": 180,
-      "content": "Professional data entry operators and administrative assistants are evaluated on speed consistency and error minimization. Maintaining steady rhythm and posture minimizes fatigue during high-volume document typing tests.",
+      "difficulty": "advanced",
+      "content": "Professional data entry operators and administrative assistants are evaluated on speed consistency and error minimization. Maintaining steady rhythm and posture minimizes fatigue during high-volume document typing tests. Accuracy in reproducing complex text passages demonstrates attention to detail and professional competence.",
       "passCriteria": {
         "minWpm": 40,
         "minCpm": 200,
         "maxErrorRate": 0.03
+      }
+    },
+    {
+      "id": "exam-set-en-03",
+      "title": "Government Office Clerk Examination — Set 3",
+      "type": "paragraph",
+      "durationSec": 300,
+      "difficulty": "standard",
+      "content": "The position of office clerk in government departments requires candidates to demonstrate proficiency in both English and vernacular language typing. Daily responsibilities include drafting official correspondence, preparing meeting minutes, maintaining filing systems, and processing citizen applications. Candidates must type the provided passage within the allotted time while maintaining proper formatting and punctuation standards.",
+      "passCriteria": {
+        "minWpm": 30,
+        "minCpm": 150,
+        "maxErrorRate": 0.05
+      }
+    },
+    {
+      "id": "exam-set-en-04",
+      "title": "Banking Sector Data Entry Test — Set 4",
+      "type": "paragraph",
+      "durationSec": 240,
+      "difficulty": "advanced",
+      "content": "Banking and financial institutions require data entry professionals who can process large volumes of numerical and textual information with absolute precision. Transaction records, loan applications, audit reports, and regulatory compliance documents must be prepared without errors. Special attention to numbers, decimal points, and financial terminology is essential during banking sector typing examinations.",
+      "passCriteria": {
+        "minWpm": 35,
+        "minCpm": 175,
+        "maxErrorRate": 0.04
+      }
+    },
+    {
+      "id": "exam-set-en-05",
+      "title": "High-Speed Typing Challenge — Set 5",
+      "type": "paragraph",
+      "durationSec": 120,
+      "difficulty": "expert",
+      "content": "This advanced challenge is designed for experienced typists seeking to test their limits. Within an extremely limited timeframe, candidates must reproduce a complex passage containing varied vocabulary, proper nouns, technical terminology, and diverse punctuation patterns. Achieving forty-five words per minute with less than three percent errors demonstrates expert-level keyboard mastery.",
+      "passCriteria": {
+        "minWpm": 45,
+        "minCpm": 225,
+        "maxErrorRate": 0.03
+      }
+    },
+    {
+      "id": "exam-set-en-06",
+      "title": "Entry-Level Practice Exam — Set 6",
+      "type": "paragraph",
+      "durationSec": 300,
+      "difficulty": "beginner",
+      "content": "This is a beginner-level typing test. The text is simple and uses common words. Type each word carefully. Look at the screen while you type. Do not rush. Focus on accuracy first. Speed will come with regular practice. Try to type without looking at the keyboard. This is called touch typing. It is a valuable skill for office work.",
+      "passCriteria": {
+        "minWpm": 20,
+        "minCpm": 100,
+        "maxErrorRate": 0.08
       }
     }
   ]

@@ -72,8 +72,15 @@ export interface CharacterGroup {
   id: string;
   title: string;
   titleEn: string;
+  guide?: string;
+  guideEn?: string;
   items: CharacterItem[];
+  practiceSentences?: string[];
 }
+
+export type TutorialSubView = 'character' | 'mixed' | 'sentences' | 'custom' | 'blank';
+
+export type TimerDuration = 30 | 60 | 120 | 300;
 
 export interface WordItem {
   text: string;
