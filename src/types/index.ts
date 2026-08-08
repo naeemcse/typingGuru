@@ -4,7 +4,7 @@ export type BanglaLayout = 'bijoy' | 'national' | 'avro';
 export type EnglishLayout = 'qwerty';
 export type KeyboardLayout = BanglaLayout | EnglishLayout;
 
-export type AppMode = 'tutorial' | 'practice' | 'exam' | 'analytics';
+export type AppMode = 'tutorial' | 'practice' | 'exam' | 'analytics' | 'about';
 
 export type ContentCategory = 'characters' | 'words' | 'sentences' | 'paragraphs' | 'weakness';
 

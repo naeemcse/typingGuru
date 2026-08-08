@@ -8,7 +8,8 @@ import {
   Settings as SettingsIcon,
   Globe,
   Zap,
-  Flame
+  Flame,
+  Info
 } from 'lucide-react';
 import { AppMode, Language, BanglaLayout, UserSettings } from '../../types';
 
@@ -100,6 +101,17 @@ export const Header: React.FC<HeaderProps> = ({
             <BarChart3 className="w-3.5 h-3.5" />
             <span>{settings.language === 'bn' ? 'এনালাইটিক্স' : 'Analytics'}</span>
           </button>
+
+          <button
+            onClick={() => onModeChange('about')}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${activeMode === 'about'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+              }`}
+          >
+            <Info className="w-3.5 h-3.5 text-indigo-400" />
+            <span>{settings.language === 'bn' ? 'আমাদের সম্পর্কে' : 'About Us'}</span>
+          </button>
         </nav>
 
         {/* Controls: Language, Bangla Layout, Best Score, Settings */}
@@ -174,6 +186,13 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
         >
           {settings.language === 'bn' ? 'এনালাইটিক্স' : 'Analytics'}
+        </button>
+        <button
+          onClick={() => onModeChange('about')}
+          className={`px-3 py-1 rounded-lg text-xs font-medium ${activeMode === 'about' ? 'bg-indigo-600 text-white' : 'text-slate-400'
+            }`}
+        >
+          {settings.language === 'bn' ? 'সম্পর্কে' : 'About'}
         </button>
       </div>
     </header>

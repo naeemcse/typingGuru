@@ -1,0 +1,35 @@
+{
+  "developer": {
+    "name": "Najmul Islam Naeem",
+    "role": "Software Engineer",
+    "company": "Brain Station 23",
+    "location": "Bangladesh",
+    "title": "Software Engineer",
+    "summary": "Software Engineer experienced in building and maintaining web applications, e-commerce platforms, APIs, and backend systems using .NET technologies."
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/najmul-islam-naeem/",
+    "youtube": "https://www.youtube.com/@ICTCareHome",
+    "email": "csenajmulislamnaeem@gmail.com",
+    "github": "https://github.com/naeemcse"
+  },
+  "otherProjects": [
+    {
+      "id": "applymama",
+      "name": "ApplyMama",
+      "tagline": "Job Application Form Autofill & Automation Extension",
+      "link": "https://applymama.vercel.app/",
+      "description": "A powerful browser extension designed to simplify and automate job application form filling across government and recruitment portals.",
+      "storeUrls": {
+        "chrome": "https://chromewebstore.google.com/detail/mbohmdgofljbgicjfhoahcdnlpjmdejo?utm_source=item-share-cb",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/hemnpphbcjjglegghccffhkchdbojlab",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/applymama-teletalk-autofill/"
+      }
+    }
+  ],
+  "platform": {
+    "name": "TypingGuru BN/EN",
+    "tagline": "Bangla & English Typing Test, Tutor & Recruitment Assessment Platform",
+    "description": "TypingGuru is an open-source, high-performance web platform built to help candidates, students, and professionals master Bangla (Bijoy, Avro, National) and English typing skills for competitive job recruitment exams."
+  }
+}

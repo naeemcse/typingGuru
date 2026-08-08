@@ -6,6 +6,7 @@ import { TutorialModule } from './modules/tutorial/TutorialModule';
 import { PracticeModule } from './modules/practice/PracticeModule';
 import { ExamModule } from './modules/exam/ExamModule';
 import { AnalyticsModule } from './modules/analytics/AnalyticsModule';
+import { AboutModule } from './modules/about/AboutModule';
 import { ResultModal } from './components/results/ResultModal';
 import { CertificateModal } from './components/results/CertificateModal';
 import { SettingsModal } from './components/settings/SettingsModal';
@@ -102,6 +103,10 @@ export function App() {
 
         {activeMode === 'analytics' && (
           <AnalyticsModule settings={settings} />
+        )}
+
+        {activeMode === 'about' && (
+          <AboutModule settings={settings} />
         )}
       </main>
 

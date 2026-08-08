@@ -13,13 +13,16 @@
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: rgba(15, 23, 42, 0.6);
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(99, 102, 241, 0.4);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(99, 102, 241, 0.7);
 }
@@ -46,8 +49,17 @@
 
 /* Caret Blinking Animation */
 @keyframes caret-pulse {
-  0%, 100% { opacity: 1; transform: scaleY(1); }
-  50% { opacity: 0.3; transform: scaleY(0.9); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: scaleY(0.9);
+  }
 }
 
 .animate-caret {
@@ -64,13 +76,16 @@
 .tutorial-sidebar::-webkit-scrollbar {
   width: 4px;
 }
+
 .tutorial-sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .tutorial-sidebar::-webkit-scrollbar-thumb {
   background: rgba(99, 102, 241, 0.25);
   border-radius: 4px;
 }
+
 .tutorial-sidebar::-webkit-scrollbar-thumb:hover {
   background: rgba(99, 102, 241, 0.5);
 }
@@ -90,13 +105,85 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(99, 102, 241, 0.2) transparent;
 }
+
 .scrollbar-thin::-webkit-scrollbar {
   height: 4px;
 }
+
 .scrollbar-thin::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .scrollbar-thin::-webkit-scrollbar-thumb {
   background: rgba(99, 102, 241, 0.2);
   border-radius: 4px;
+}
+
+/* Precise Single-Page Print Rules for Certificate PDF Export */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    height: 100% !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Completely collapse header, main content, and footer out of print flow */
+  header,
+  main,
+  footer,
+  .no-print,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Pin certificate overlay to top-left of page 1 */
+  .certificate-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 15mm 12mm !important;
+    background: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .certificate-modal-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .certificate-printable-card {
+    border: 3px solid #1e1b4b !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    padding: 24px !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
 }

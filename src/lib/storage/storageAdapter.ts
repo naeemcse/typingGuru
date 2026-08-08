@@ -2,6 +2,7 @@ import { TypingSession, UserSettings } from '../../types';
 
 const STORAGE_KEY_SESSIONS = 'typingapp:v1:sessions';
 const STORAGE_KEY_SETTINGS = 'typingapp:v1:settings';
+const STORAGE_KEY_CANDIDATE_NAME = 'typingapp:v1:candidatename';
 
 export const DEFAULT_SETTINGS: UserSettings = {
   language: 'bn',
@@ -81,6 +82,22 @@ export class StorageAdapter {
       .map(([char, errorCount]) => ({ char, errorCount }))
       .sort((a, b) => b.errorCount - a.errorCount)
       .slice(0, limit);
+  }
+
+  static getCandidateName(): string {
+    try {
+      return localStorage.getItem(STORAGE_KEY_CANDIDATE_NAME) || '';
+    } catch {
+      return '';
+    }
+  }
+
+  static saveCandidateName(name: string): void {
+    try {
+      localStorage.setItem(STORAGE_KEY_CANDIDATE_NAME, name);
+    } catch (e) {
+      console.error('Failed to save candidate name to localStorage:', e);
+    }
   }
 
   static clearHistory(): void {

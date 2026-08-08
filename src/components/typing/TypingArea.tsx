@@ -32,27 +32,59 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
 
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<any>(null);
+  const isFinishedRef = useRef(false);
+
+  // Refs for state values inside steady interval callback
+  const typedTextRef = useRef(typedText);
+  typedTextRef.current = typedText;
+
+  const targetTextRef = useRef(targetText);
+  targetTextRef.current = targetText;
+
+  const timelineSnapshotsRef = useRef(timelineSnapshots);
+  timelineSnapshotsRef.current = timelineSnapshots;
 
   const targetChars = segmentText(targetText);
   const typedChars = segmentText(typedText);
   const currentIndex = typedChars.length;
-  const currentTargetChar = targetChars[currentIndex] || '';
 
-  // Focus input automatically on mount or click on text box
+  // Reset session state when prompt targetText changes
   useEffect(() => {
-    inputRef.current?.focus();
+    handleReset();
   }, [targetText]);
 
-  // Timer Countdown / Countup
+  // Focus input automatically on mount
   useEffect(() => {
-    if (isStarted && !isPaused) {
+    inputRef.current?.focus();
+  }, []);
+
+  const finishSession = (finalSec: number) => {
+    if (isFinishedRef.current) return;
+    isFinishedRef.current = true;
+    if (timerRef.current) clearInterval(timerRef.current);
+    
+    const currentTyped = typedTextRef.current;
+    const currentTarget = targetTextRef.current;
+    const currentSnapshots = timelineSnapshotsRef.current;
+    
+    const finalMetrics = calculateMetrics(currentTarget, currentTyped, Math.max(finalSec, 1), currentSnapshots);
+    SoundEngine.playCompletionChime(settings.soundEnabled, settings.soundVolume);
+    onSessionComplete(finalMetrics);
+  };
+
+  // Timer Countdown / Countup (Decoupled from typedText to prevent interval reset on keypress)
+  useEffect(() => {
+    if (isStarted && !isPaused && !isFinishedRef.current) {
       timerRef.current = setInterval(() => {
         setElapsedSec((prev) => {
           const next = prev + 1;
 
           // Record timeline snapshot every 3 seconds
           if (next % 3 === 0) {
-            const currentMetrics = calculateMetrics(targetText, typedText, next, timelineSnapshots);
+            const currentTyped = typedTextRef.current;
+            const currentTarget = targetTextRef.current;
+            const currentSnapshots = timelineSnapshotsRef.current;
+            const currentMetrics = calculateMetrics(currentTarget, currentTyped, next, currentSnapshots);
             setTimelineSnapshots((snaps) => [
               ...snaps,
               {
@@ -65,8 +97,8 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
             ]);
           }
 
-          // Check for session completion based on countdown timer
-          if (settings.timerMode === 'countdown' && next >= durationSec) {
+          // Complete session when elapsed time reaches or exceeds durationSec
+          if (next >= durationSec) {
             finishSession(next);
           }
 
@@ -80,24 +112,17 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isStarted, isPaused, durationSec, targetText, typedText, settings.timerMode]);
+  }, [isStarted, isPaused, durationSec]);
 
   // Complete session if user typed the entire prompt text
   useEffect(() => {
-    if (isStarted && typedChars.length >= targetChars.length && targetChars.length > 0) {
+    if (isStarted && !isFinishedRef.current && typedChars.length >= targetChars.length && targetChars.length > 0) {
       finishSession(elapsedSec);
     }
-  }, [typedText]);
-
-  const finishSession = (finalSec: number) => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    const finalMetrics = calculateMetrics(targetText, typedText, Math.max(finalSec, 1), timelineSnapshots);
-    SoundEngine.playCompletionChime(settings.soundEnabled, settings.soundVolume);
-    onSessionComplete(finalMetrics);
-  };
+  }, [typedText, isStarted, targetChars.length, typedChars.length]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (isPaused) return;
+    if (isPaused || isFinishedRef.current) return;
 
     // Handle Backspace lock check
     if (e.key === 'Backspace') {
@@ -150,6 +175,7 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
   };
 
   const handleReset = () => {
+    isFinishedRef.current = false;
     setTypedText('');
     setIsStarted(false);
     setIsPaused(false);
