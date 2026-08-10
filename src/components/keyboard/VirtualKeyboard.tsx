@@ -148,6 +148,8 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
           <div key={rIdx} className="flex gap-1.5 justify-center min-w-max">
             {row.map((k) => {
               const isPressed = pressedCode === k.code;
+              const isLetterKey = k.code.startsWith('Key');
+              const isControlKey = !k.shiftKey;
               
               // Determine Bangla glyph translation for key if language is Bangla
               const primaryBangla = settings.language === 'bn' && k.key.length === 1 
@@ -164,28 +166,39 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
                 activeTargetKey === shiftBangla
               );
 
+              // Single character centering for control keys, English letter keys, and Bangla keys without shift variant
+              const isSingleCharKey = isControlKey || (settings.language === 'en' && isLetterKey) || (settings.language === 'bn' && isLetterKey && (!shiftBangla || shiftBangla === primaryBangla));
+
+              // Primary label display (rendered in exact center)
+              const mainLabel = (settings.language === 'en' && isLetterKey)
+                ? k.key.toUpperCase()
+                : (primaryBangla || k.key);
+
+              // Top shift label display (rendered in top-right corner when dual characters exist)
+              const topShiftLabel = !isSingleCharKey ? (shiftBangla || k.shiftKey) : null;
+
               return (
                 <div
                   key={k.code}
                   className={`
-                    relative h-11 sm:h-12 flex flex-col justify-between p-1 sm:p-1.5 rounded-lg border text-xs font-semibold select-none transition-all duration-75
+                    relative h-11 sm:h-12 flex items-center justify-center p-1 sm:p-1.5 rounded-lg border text-xs font-semibold select-none transition-all duration-75
                     ${k.width || 'w-9 sm:w-11'}
                     ${FINGER_BG_CLASSES[k.finger]}
                     ${isPressed ? 'bg-indigo-600 border-indigo-400 text-white translate-y-0.5 shadow-inner' : 'bg-slate-900/90 text-slate-300'}
                     ${isTargetKey ? 'ring-2 ring-emerald-400 bg-emerald-950/60 text-emerald-200 border-emerald-500 animate-pulse' : ''}
                   `}
                 >
-                  {/* Top-right Shift character */}
-                  {k.shiftKey && (
-                    <span className="self-end text-[9px] sm:text-[10px] text-slate-500 font-normal leading-none">
-                      {shiftBangla || k.shiftKey}
+                  {/* Primary character in exact center */}
+                  <span className="font-bangla text-xs sm:text-sm font-bold leading-none text-slate-100 text-center">
+                    {mainLabel}
+                  </span>
+
+                  {/* Secondary/Shift character in top-right corner */}
+                  {topShiftLabel && (
+                    <span className="absolute top-1 right-1.5 text-[9px] sm:text-[10px] text-slate-400 font-normal leading-none">
+                      {topShiftLabel}
                     </span>
                   )}
-
-                  {/* Center/Bottom Primary character */}
-                  <span className="self-start font-bangla text-xs sm:text-sm font-bold leading-none text-slate-100">
-                    {primaryBangla || k.key}
-                  </span>
 
                   {/* Subscript physical key reference for Bangla mode */}
                   {settings.language === 'bn' && primaryBangla && (
