@@ -10,6 +10,7 @@ import { AboutModule } from './modules/about/AboutModule';
 import { ResultModal } from './components/results/ResultModal';
 import { CertificateModal } from './components/results/CertificateModal';
 import { SettingsModal } from './components/settings/SettingsModal';
+import { Analytics } from '@vercel/analytics/react';
 
 export function App() {
   const [activeMode, setActiveMode] = useState<AppMode>('practice');
@@ -66,7 +67,7 @@ export function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-bangla antialiased selection:bg-indigo-600 selection:text-white">
-      
+
       {/* Top Header Navbar */}
       <Header
         activeMode={activeMode}
@@ -146,6 +147,7 @@ export function App() {
           onClose={() => setShowSettingsModal(false)}
         />
       )}
+      <Analytics />
     </div>
   );
 }
